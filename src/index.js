@@ -9,8 +9,9 @@ const { ZoomHandler } = require("zoomhandler")
 
 new ZoomHandler({
     client,
-    messageCommandsPath: path.join(__dirname,  "commands"),
-    eventsPath: path.join(__dirname, "events")
-})
+    messageCommandsPath: path.join(__dirname, "messageCommands"),
+    interactionCommandsPath: path.join(__dirname, "interactionCommands"),
+    eventsPath: path.join(__dirname, "events"),
+  });
 
 client.login(require("../config.json").token)
